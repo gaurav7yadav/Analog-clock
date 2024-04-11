@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Source+Sans+Pro&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background: rgb(229, 229, 229);
+}
+
+.snoozeBtn {
+    transition-duration: 0.5s;
+    width: 100px;
+    display: none;
+
+    margin: 20px 0px;
+
+    animation: snooze 4s linear  infinite;
+
+    cursor: pointer;
+
+    filter: drop-shadow(0px 10px 5px rgb(75, 75, 75));
+}
+
+@keyframes snooze {
+    0%{
+        transform: translateY(0px);
+        rotate: 0deg;
+    }
+    25%{
+        transform: translateY(10px);
+        rotate: 20deg;
+    }
+    50%{
+        transform: translateY(-10px);
+        rotate: 0deg;
+    }
+    75%{
+        transform: translateY(10px);
+        rotate: -20deg;
+    }
+    100%{
+        transform: translateY(0px);
+        rotate: 0deg;
+    }
+}
+
+.clock {
+    background: url("image/clock.png");
+    background-size: cover;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    margin: auto;
+    margin-top: 5vh;
+    
+    box-shadow: 0px 0px 20px rgb(135, 135, 135);
+
+    position: relative;
+
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+@keyframes Shake {
+    0%{
+        transform: translateX(5px);
+    }
+    25%{
+        transform: translateX(-5px);
+    }
+    50%{
+        transform: translateX(5px);
+    }
+    75%{
+        transform: translateX(-5px);
+    }
+    100%{
+        transform: translateX(5px);
+    }
+}
+
+.hourArm {
+    position: absolute;
+    
+    height: 120px;
+    width: 2px;
+
+    background: #000;
+    box-shadow: 0px 0px 10px black;
+
+    left: calc(50% - 2px);
+    top: calc(50% - 120px);
+    
+    transform-origin: bottom;
+}
+
+.minuteArm {
+    position: absolute;
+
+    height: 150px;
+    width: 2px;
+    
+    background: #000;
+    box-shadow: 0px 0px 10px black;
+    
+    left: calc(50% - 2px);
+    top: calc(50% - 150px);
+    
+    transform-origin: bottom;
+}
+
+.secondArm {
+    position: absolute;
+    
+    height: 180px;
+    width: 2px;
+    
+    background: #000;
+    box-shadow: 0px 0px 10px black;
+    
+    left: calc(50% - 2px);
+    top: calc(50% - 180px);
+    
+    transform-origin: bottom;
+}
+
+.alarm {
+    width: 100px;
+    text-align: center;
+    
+    margin: auto;
+    margin-top: 5vh;
+}
+
+.alarm div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.timeBox {
+    width: 100%;
+    height: 33px;
+    padding: 0px 10px ;
+    
+    background: rgb(218, 218, 218);
+    
+    border-style: solid;
+    border-color: rgb(231, 231, 231);
+    box-shadow: 0px 0px 20px rgb(161, 161, 161);
+    
+    outline: 0;
+    
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.digitalClock {
+    width: 250px;
+    height: 70px;
+
+    border-radius: 15px;
+    
+    padding: 5px 0px;
+    margin: 30px auto;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hourPart {
+    margin-top: 3px;
+
+    width: 30%;
+    height: 100%;
+    
+    background: black;
+
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+
+    border-style: solid;
+    border-color: rgb(144, 144, 144);
+    border-width: 1px;
+}
+
+.minutePart {
+    margin-top: 3px;
+
+    width: 30%;
+    height: 100%;
+    
+    background: black;
+
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+
+    border-style: solid;
+    border-color: rgb(144, 144, 144);
+    border-width: 1px;
+}
+
+.secondPart {
+    margin-top: 3px;
+
+    width: 30%;
+    height: 100%;
+    
+    background: black;
+
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+
+    border-style: solid;
+    border-color: rgb(144, 144, 144);
+    border-width: 1px;
+}
+
+.hourPart p{
+    font-size: 2em;
+    margin-top: 15px;
+
+    color: white;
+
+    text-align: center;
+}
+
+.minutePart p{
+    font-size: 2em;
+    margin-top: 15px;
+
+    text-align: center;
+
+    color: white;
+}
+
+.secondPart p{
+    font-size: 2em;
+    margin-top: 15px;
+    
+    text-align: center;
+
+    color: white;
+}
